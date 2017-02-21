@@ -1,7 +1,7 @@
 #!/bin/bash
 
 _jnh() {
-    suggestions="yololo trololo"
+    suggestions="$(docker ps --format "{{.Names}}")"
     local cur
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
