@@ -1,0 +1,13 @@
+#!/bin/bash
+
+_jnh() {
+    suggestions="yololo trololo"
+    local cur
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    COMPREPLY=( $(compgen -W "$suggestions" -- $cur) )
+    return 0
+}
+
+complete -o nospace -F _jnh jnh
+
