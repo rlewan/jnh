@@ -5,7 +5,7 @@ _jnh() {
     local cur
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
-    COMPREPLY=( $(compgen -W "$suggestions" -- $cur) )
+    COMPREPLY=($(compgen -W "$suggestions" -- $cur))
     return 0
 }
 
